@@ -6,7 +6,7 @@ from email import encoders
 
 
 # Setting the mail client
-sender = "jshubham579@gmail.com"
+sender = "shbhm89300@gmail.com"
 reciever = "jshubham579@gmail.com"
 msg = MIMEMultipart() 
 msg['From'] = sender 
@@ -26,8 +26,14 @@ def sendmail(subject, file_name1, path_name, body_message):
     msg.attach(p)     # attach the instance 'p' to instance 'msg'
     s = smtplib.SMTP('smtp.gmail.com', 587)     # creates SMTP session 
     s.starttls()     # start TLS for security 
-    s.login(sender, "password")   # Authentication 
+    s.login(sender, "afufmcxpirpulujy")   # Authentication 
     text = msg.as_string()  # Converts the Multipart msg into a string
     s.sendmail(sender, reciever, text)   # sending the mail 
     print("[INFO] Mail Sent\n[MSG] Mailed to {}\n[MSG] Subject: {}" .format(reciever,subject))
     s.quit()
+
+sendmail(
+    subject="Test Mail",
+    file_name1="ImageMon-Jan--3-202551-2022.png",
+    path_name="/home/pi/Desktop/IoT-project/Photos/ImageMon-Jan--3-202551-2022.png",
+    body_message="This is test mail.")

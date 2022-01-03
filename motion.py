@@ -6,8 +6,8 @@ from main import blink
 # from mail import sendmail
 
 
-# GPIO pin 26
-pir = MotionSensor(26)
+# GPIO pin 4
+pir = MotionSensor(4)
 
 def motion():
     while True:
@@ -25,7 +25,7 @@ def motion():
         print("[INFO] Image Saved" .format(image_name))
         
         subject = "Motion Detected {}" .format(image_name)
-        path_name = "~/Desktop/IoT-project/{}" .format(image_name)
+        path_name = "/home/pi/Desktop/IoT-project/{}" .format(image_name)
         body_message = "\n Check the attachment below for the Image"
 
         print(subject,file_name1,path_name,body_message)
