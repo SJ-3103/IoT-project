@@ -22,4 +22,4 @@ def temperature_fun(row_list):
 
     return row_list
 
-print(temperature_fun([]))
+# print(temperature_fun([]))

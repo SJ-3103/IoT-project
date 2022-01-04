@@ -31,9 +31,3 @@ def sendmail(subject, file_name1, path_name, body_message):
     s.sendmail(sender, reciever, text)   # sending the mail 
     print("[INFO] Mail Sent\n[MSG] Mailed to {}\n[MSG] Subject: {}" .format(reciever,subject))
     s.quit()
-
-sendmail(
-    subject="Test Mail",
-    file_name1="ImageMon-Jan--3-202551-2022.png",
-    path_name="/home/pi/Desktop/IoT-project/Photos/ImageMon-Jan--3-202551-2022.png",
-    body_message="This is test mail.")
