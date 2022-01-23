@@ -1,7 +1,7 @@
 from time import sleep
 import Adafruit_MCP3008 as mcp
 from csv_writter import makearow
-from main import blink
+from blink import blink
 
 mcpval = mcp.MCP3008(clk=11, cs=8, miso=9, mosi=10)    # Setting MCP3008
 
