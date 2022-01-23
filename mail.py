@@ -26,7 +26,7 @@ def sendmail(subject, file_name1, path_name, body_message):
     msg.attach(p)     # attach the instance 'p' to instance 'msg'
     s = smtplib.SMTP('smtp.gmail.com', 587)     # creates SMTP session 
     s.starttls()     # start TLS for security 
-    s.login(sender, "afufmcxpirpulujy")   # Authentication 
+    s.login(sender, "password")   # Authentication 
     text = msg.as_string()  # Converts the Multipart msg into a string
     s.sendmail(sender, reciever, text)   # sending the mail 
     print("[INFO] Mail Sent\n[MSG] Mailed to {}\n[MSG] Subject: {}" .format(reciever,subject))
